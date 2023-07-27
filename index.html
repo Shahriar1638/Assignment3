@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Burst</title>
+    <!-- Fontawesome -->
+    <script src="https://kit.fontawesome.com/5f28ebb90a.js" crossorigin="anonymous"></script>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+    <!-- Tailwind and Daisy Ui -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.0/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>  
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#F85559',
+            }
+          }
+        }
+      }
+    </script>
+</head>
+<body style="font-family: 'Lato', sans-serif;">
+    <header class="container mx-auto">
+        <nav class="bg-primary h-16 lg:h-32 mt-12 mb-10 rounded-full text-white">
+          <div class="navbar px-14 py-7">
+            <div class="navbar-start">
+              <div class="dropdown">
+                <label tabindex="0" class="btn btn-ghost lg:hidden">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+                </label>
+                <ul tabindex="0" class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                  <li class="text-xl"><a>Home</a></li>
+                  <li class="text-xl"><a>About Us</a></li>
+                  <li class="text-xl"><a>Shop</a></li>
+                  <li class="text-xl"><a>All Fruits</a></li>
+                </ul>
+              </div>
+              <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1">
+                  <li class="text-xl"><a>Home</a></li>
+                  <li class="text-xl"><a>About Us</a></li>
+                  <li class="text-xl"><a>Shop</a></li>
+                  <li class="text-xl"><a>All Fruits</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="navbar-center hidden lg:flex pb-6">
+              <a class="btn btn-ghost normal-case text-xl">
+                <div class="flex items-center">
+                  <img class="w-14 h-16" src="images/logo.png" alt="">
+                  <h1 class="text-4xl text-white ml-4">Fruit Burst</h1>
+                </div>          
+              </a>
+            </div>
+            <div class="navbar-end">
+              <div class="relative w-96 h-14 bg-white rounded-full flex items-center">
+                <input type="text" placeholder="Search here" class="w-full h-full pl-10 pr-14 py-2 text-gray-700 rounded-full focus:outline-none" />
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 absolute right-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-5.2-5.2M11 16a5 5 0 100-10 5 5 0 000 10z" />
+                </svg>
+              </div>                            
+            </div>
+          </div>
+        </nav>
+    </header>
+    <main class="container mx-auto">
+       <section>
+        <!-- Carousel -->
+        <div class="carousel lg:w-[96rem] lg:h-[37.5rem] mt-12">
+          <div id="slide1" class="carousel-item relative w-full flex flex-col justify-center text-center bg-center bg-no-repeat bg-cover" style="background-image: url('images/banner1.png');">
+          <div class="overlay absolute top-0 left-0 w-full h-full z-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));"></div>
+            <div class="flex h-full items-center justify-center" >
+              <div class="text-white z-40">
+                  <h1 class="font-extrabold text-7xl text-white mb-6">Exotic tastes at your <br>doorstep</h1>
+                  <p class="text-xl text-white">We supply highly quality organic products</p>
+                  <button class="btn bg-primary text-white mt-8">Shop Now</button>
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide4" class="btn btn-circle">❮</a> 
+              <a href="#slide2" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide2" class="carousel-item relative w-full flex flex-col justify-center text-center bg-center bg-no-repeat bg-cover" style="background-image: url('images/banner2.png');">
+          <div class="overlay absolute top-0 left-0 w-full h-full z-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));"></div>
+            <div class="flex h-full items-center justify-center" >
+              <div class="text-white z-40">
+                  <h1 class="font-extrabold text-7xl text-white mb-6">Exotic tastes at your <br>doorstep</h1>
+                  <p class="text-xl text-white">We supply highly quality organic products</p>
+                  <button class="btn bg-primary text-white mt-8">Shop Now</button>
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide1" class="btn btn-circle">❮</a> 
+              <a href="#slide3" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide3" class="carousel-item relative w-full flex flex-col justify-center text-center bg-center bg-no-repeat bg-cover" style="background-image: url('images/banner3.png');">
+          <div class="overlay absolute top-0 left-0 w-full h-full z-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));"></div>
+            <div class="flex h-full items-center justify-center" >
+              <div class="text-white z-40">
+                  <h1 class="font-extrabold text-7xl text-white mb-6">Exotic tastes at your <br>doorstep</h1>
+                  <p class="text-xl text-white">We supply highly quality organic products</p>
+                  <button class="btn bg-primary text-white mt-8">Shop Now</button>
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide2" class="btn btn-circle">❮</a> 
+              <a href="#slide4" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+          <div id="slide4" class="carousel-item relative w-full flex flex-col justify-center text-center bg-center bg-no-repeat bg-cover" style="background-image: url('images/banner4.png');">
+          <div class="overlay absolute top-0 left-0 w-full h-full z-0" style="background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3));"></div>
+            <div class="flex h-full items-center justify-center" >
+              <div class="text-white z-40">
+                  <h1 class="font-extrabold text-7xl text-white mb-6">Exotic tastes at your <br>doorstep</h1>
+                  <p class="text-xl text-white">We supply highly quality organic products</p>
+                  <button class="btn bg-primary text-white mt-8">Shop Now</button>
+              </div>
+            </div>
+            <div class="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
+              <a href="#slide3" class="btn btn-circle">❮</a> 
+              <a href="#slide1" class="btn btn-circle">❯</a>
+            </div>
+          </div> 
+        </div>
+        <!-- Fruits name -->
+        <div class="hidden lg:flex justify-between items-center mx-32 px-32 w-[80rem] h-[12rem] bg-white absolute -mt-24">
+          <div class="flex flex-col items-center">
+            <img class="w-[8.75rem] h-[7rem]" src="images/fruit1.png" alt="">
+            <h2 class="text-center text-xl font-medium">Cranberries</h2>
+          </div>
+          <div class="flex flex-col items-center">
+            <img class="w-[8.75rem] h-[7rem]" src="images/fruit2.png" alt="">
+            <h2 class="text-center text-xl font-medium">Orange</h2>
+          </div>
+          <div class="flex flex-col items-center">
+            <img class="w-[8.75rem] h-[7rem]" src="images/fruit3.png" alt="">
+            <h2 class="text-center text-xl font-medium">Mango</h2>
+          </div>
+          <div class="flex flex-col items-center">
+            <img class="w-[8.75rem] h-[7rem]" src="images/fruit4.png" alt="">
+            <h2 class="text-center text-xl font-medium">Strawberry</h2>
+          </div>
+          <div class="flex flex-col items-center">
+            <img class="w-[8.75rem] h-[7rem]" src="images/fruit5.png" alt="">
+            <h2 class="text-center text-xl font-medium">Pomegranate</h2>
+          </div>
+        </div>
+       </section>
+       <section class="container md:flex-col mx-auto">
+        <!-- Text and Countdown -->
+        <div class="flex justify-between items-center mt-40">
+          <div>
+            <h2 class="text-5xl font-extrabold mb-6">Deal of the day</h2>
+            <p class="text-base font-medium">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br>Latin literature from 45 BC, making it over 2000 years old.</p>
+          </div>    
+          <div>
+            <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value:15;"></span>
+                </span>
+                days
+              </div> 
+              <div>
+                <p class="text-5xl font-extrabold">&vellip;</p>
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value:10;"></span>
+                </span>
+                hours
+              </div>
+              <div>
+                <p class="text-5xl font-extrabold">&vellip;</p>
+              </div> 
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value:24;"></span>
+                </span>
+                min
+              </div> 
+              <div>
+                <p class="text-5xl font-extrabold">&vellip;</p>
+              </div>
+              <div class="flex flex-col">
+                <span class="countdown font-mono text-5xl">
+                  <span style="--value:52;"></span>
+                </span>
+                sec
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Cards -->
+        <div class="flex justify-between items-center mt-12">
+          <div class="card w-[21.375rem] h-[29.8125rem] bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="images/fruit6.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold mt-12">12.90$ - 18.85$</h2>
+              <p class="text-base mt-8">Apple</p>
+              <svg class="mt-6" xmlns="http://www.w3.org/2000/svg" width="160" height="24" viewBox="0 0 160 24" fill="none">
+                <path d="M45.8527 0L50.4015 7.00591L58.4702 9.16716L53.2129 15.6584L53.6507 24L45.8527 21.0059L38.0546 24L38.4925 15.6584L33.2351 9.16716L41.3038 7.00591L45.8527 0Z" fill="#F85559"/>
+                <path d="M45.9037 0L50.4526 7.00591L58.5213 9.16716L53.264 15.6584L53.7018 24L45.9037 21.0059V0Z" fill="#FBC0A8"/>
+                <path d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z" fill="#F85559"/>
+                <path d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z" fill="#FBC0A8"/>
+                <path d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z" fill="#FBC0A8"/>
+                <path d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z" fill="#FBC0A8"/>
+              </svg>
+              <div class="card-actions">
+                <a class="text-lg mt-6" href="">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card w-[21.375rem] h-[29.8125rem] bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="images/fruit7.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold mt-12">12.90$ - 18.85$</h2>
+              <p class="text-base mt-8">Orange</p>
+              <svg class="mt-6" xmlns="http://www.w3.org/2000/svg" width="160" height="24" viewBox="0 0 160 24" fill="none">
+                <path d="M45.8527 0L50.4015 7.00591L58.4702 9.16716L53.2129 15.6584L53.6507 24L45.8527 21.0059L38.0546 24L38.4925 15.6584L33.2351 9.16716L41.3038 7.00591L45.8527 0Z" fill="#F85559"/>
+                <path d="M45.9037 0L50.4526 7.00591L58.5213 9.16716L53.264 15.6584L53.7018 24L45.9037 21.0059V0Z" fill="#FBC0A8"/>
+                <path d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z" fill="#F85559"/>
+                <path d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z" fill="#FBC0A8"/>
+                <path d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z" fill="#FBC0A8"/>
+                <path d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z" fill="#FBC0A8"/>
+              </svg>
+              <div class="card-actions">
+                <a class="text-lg mt-6" href="">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card w-[21.375rem] h-[29.8125rem] bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="images/fruit8.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold mt-12">12.90$ - 18.85$</h2>
+              <p class="text-base mt-8">Red Dragon</p>
+              <svg class="mt-6" xmlns="http://www.w3.org/2000/svg" width="160" height="24" viewBox="0 0 160 24" fill="none">
+                <path d="M45.8527 0L50.4015 7.00591L58.4702 9.16716L53.2129 15.6584L53.6507 24L45.8527 21.0059L38.0546 24L38.4925 15.6584L33.2351 9.16716L41.3038 7.00591L45.8527 0Z" fill="#F85559"/>
+                <path d="M45.9037 0L50.4526 7.00591L58.5213 9.16716L53.264 15.6584L53.7018 24L45.9037 21.0059V0Z" fill="#FBC0A8"/>
+                <path d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z" fill="#F85559"/>
+                <path d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z" fill="#FBC0A8"/>
+                <path d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z" fill="#FBC0A8"/>
+                <path d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z" fill="#FBC0A8"/>
+              </svg>
+              <div class="card-actions">
+                <a class="text-lg mt-6" href="">Details</a>
+              </div>
+            </div>
+          </div>
+          <div class="card w-[21.375rem] h-[29.8125rem] bg-base-100 shadow-xl">
+            <figure class="px-10 pt-10">
+              <img src="images/fruit9.png" alt="Shoes" class="rounded-xl" />
+            </figure>
+            <div class="card-body items-center text-center">
+              <h2 class="card-title font-semibold mt-12">12.90$ - 18.85$</h2>
+              <p class="text-base mt-8">Banana</p>
+              <svg class="mt-6" xmlns="http://www.w3.org/2000/svg" width="160" height="24" viewBox="0 0 160 24" fill="none">
+                <path d="M45.8527 0L50.4015 7.00591L58.4702 9.16716L53.2129 15.6584L53.6507 24L45.8527 21.0059L38.0546 24L38.4925 15.6584L33.2351 9.16716L41.3038 7.00591L45.8527 0Z" fill="#F85559"/>
+                <path d="M45.9037 0L50.4526 7.00591L58.5213 9.16716L53.264 15.6584L53.7018 24L45.9037 21.0059V0Z" fill="#FBC0A8"/>
+                <path d="M12.6176 0L17.1664 7.00591L25.2351 9.16716L19.9778 15.6584L20.4156 24L12.6176 21.0059L4.81952 24L5.25735 15.6584L0 9.16716L8.06871 7.00591L12.6176 0Z" fill="#F85559"/>
+                <path d="M79.6176 0L84.1664 7.00591L92.2351 9.16716L86.9778 15.6584L87.4156 24L79.6176 21.0059L71.8195 24L72.2574 15.6584L67 9.16716L75.0687 7.00591L79.6176 0Z" fill="#FBC0A8"/>
+                <path d="M146.618 0L151.166 7.00591L159.235 9.16716L153.978 15.6584L154.416 24L146.618 21.0059L138.82 24L139.257 15.6584L134 9.16716L142.069 7.00591L146.618 0Z" fill="#FBC0A8"/>
+                <path d="M113.618 0L118.166 7.00591L126.235 9.16716L120.978 15.6584L121.416 24L113.618 21.0059L105.82 24L106.257 15.6584L101 9.16716L109.069 7.00591L113.618 0Z" fill="#FBC0A8"/>
+              </svg>
+              <div class="card-actions">
+                <a class="text-lg mt-6" href="">Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Button at the middle -->
+        <div class="flex justify-center"><button class="btn bg-primary text-white mt-36">Shop All</button></div>
+       </section>
+       <!-- Member info -->
+       <section>
+        <div class="carousel lg:w-[96rem] lg:h-[43.125rem] mt-24">
+          <div class="carousel-item relative w-full flex flex-col justify-center text-center bg-center bg-no-repeat bg-cover" style="background-image: url('images/banner1.png');">
+          <div class="overlay absolute top-0 left-0 w-full h-full z-0" style="background: rgba(0, 0, 0, 0.7);"></div>
+            <div class="flex h-full items-center justify-center flex-col z-40" >
+              <div class="mt-20">
+                <h2 class="text-white text-5xl text-center font-extrabold mb-6">Meet the team section</h2>
+                <p class="text-white text-base text-center mb-10">Contrary to popular belief, is not simply random text. It has roots in a piece of classical <br>Latin literature from 45 BC, making it over 2000 years old.</p>
+              </div>
+              <!-- member card -->
+              <div class="text-white flex flex-row gap-x-12 md:flex-row">
+                <div class="card w-90">
+                  <figure class="px-10 pt-10">
+                    <img src="images/member1.png" alt="Shoes" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl font-semibold">Awlad Hossain</h2>
+                    <p class="text-base">Fruits Expert</p>
+                    <div class="flex flex-row gap-x-4 mt-4">
+                      <i class="fa-brands fa-facebook" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-twitter" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-linkedin-in" style="color: #F85559;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card w-90">
+                  <figure class="px-10 pt-10">
+                    <img src="images/member2.png" alt="Shoes" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl font-semibold">Safia Chowdhury</h2>
+                    <p class="text-base">Fruits Expert</p>
+                    <div class="flex flex-row gap-x-4">
+                      <i class="fa-brands fa-facebook" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-twitter" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-linkedin-in" style="color: #F85559;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card w-90">
+                  <figure class="px-10 pt-10">
+                    <img src="images/member3.png" alt="Shoes" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl font-semibold">Rokib Hossain</h2>
+                    <p class="text-base">Fruits Expert</p>
+                    <div class="flex flex-row gap-x-4">
+                      <i class="fa-brands fa-facebook" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-twitter" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-linkedin-in" style="color: #F85559;"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="card w-90">
+                  <figure class="px-10 pt-10">
+                    <img src="images/member4.png" alt="Shoes" class="rounded-xl" />
+                  </figure>
+                  <div class="card-body items-center text-center">
+                    <h2 class="card-title text-2xl font-semibold">Chaity</h2>
+                    <p class="text-base">Fruits Expert</p>
+                    <div class="flex flex-row gap-x-4">
+                      <i class="fa-brands fa-facebook" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-twitter" style="color: #F85559;"></i>
+                      <i class="fa-brands fa-linkedin-in" style="color: #F85559;"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+       </section>
+    </main>
+    <footer>
+      <div>     
+        <div class="flex items-center gap-2 pb-8">
+          <img class="w-14 h-16" src="images/logo.png" alt="">
+          <h1 class="text-4xl text-white">Fruit Burst</h1>
+        </div>               
+      </div>
+    </footer>
+</body>
+</html>
